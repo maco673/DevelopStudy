@@ -1,0 +1,6 @@
+#Module생성
+* 모듈생성 기본방법
+ - 모듈생성 : module.exports = [함수 or key:value]
+ - 모듈호출 : require('[모듈경로]')
+* 모듈생성 축약방법
+ - module.exports.[key] = [value];

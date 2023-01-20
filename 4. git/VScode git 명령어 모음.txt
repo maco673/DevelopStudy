@@ -1,0 +1,3 @@
+## VScode git 명령어 모음
+$ git init : 저장소 지정
+$ git clone :  내려받기

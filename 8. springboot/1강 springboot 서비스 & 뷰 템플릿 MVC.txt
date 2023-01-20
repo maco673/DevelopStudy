@@ -1,0 +1,9 @@
+# project > src > main 
+ 1. java : java file 모음
+
+# project > src > main > resources
+ 1. static > : 전자정부 webapp과 같은 역할
+ 2. templates : MVC 디자인 패턴 내용
+# ViewTemplates (Mustache)
+
+# SpringBoot MVC

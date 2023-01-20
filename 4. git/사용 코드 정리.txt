@@ -1,0 +1,3 @@
+## cmd 창으로 사용방법
+$ git init : 저장소 지정
+$ git clone :  내려받기

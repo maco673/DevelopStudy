@@ -1,0 +1,62 @@
+** 참고 : https://syung05.tistory.com/26
+
+# SpringGradle 기본 설정
+ 1. intellij 에서 신규프로젝트 생성(gradle, java)
+ 2. 프로젝트 최상위 폴더 > Add Framework Support 클릭
+ 3. 프레임워크 선택
+  - Java EE : Web Application 설치
+  - Spring : Spring MVC, Spring Security
+
+## build.gradle 기본설정
+/* 1. 기초적인 플랫폼 사용 명시 */
+plugins {
+    id 'org.springframework.boot' version '2.6.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+/* 2. 기초 설정 및 Java 버전 명시 */
+group 'com.SpringGradle'   // Component scan to package
+version '0.0.1-SNAPSHOT'     // Application version
+sourceCompatibility = '11'  // Java version
+
+repositories {
+    mavenCentral()
+}
+
+/* 추가할 라이브러리 선언 */
+dependencies {
+    // auto 빌드 등 추가기능
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    // spring 의존성 추가
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-security')
+    implementation('org.springframework.security:spring-security-test')
+
+    // View Template Engine
+    implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
+
+    // lombok 추가
+    implementation('org.projectlombok:lombok:1.18.24')
+
+    // DB 연동 & PostgreSQL
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.0'
+    implementation group: 'org.bgee.log4jdbc-log4j2', name: 'log4jdbc-log4j2-jdbc4.1', version: '1.16'
+
+    // Test용 : junit 5 라이브러리
+    testImplementation('org.springframework.boot:spring-boot-starter-test'){
+        exclude group: 'org.junit.vintage', module: 'junit vintage-engine'
+    }
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+# 빌드툴 변경
+ - 기본값에서 Gradle로 빌드가 실행되게 되어있는데 속도 이슈가 있어 인텔리로 사용할 수 있도록 변경
+ - Settings > Bulid, Execution, Deployment > Gradle > Bulid and .. & Run Tests .. 체크

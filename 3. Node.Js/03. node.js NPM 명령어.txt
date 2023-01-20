@@ -1,0 +1,13 @@
+#NPM 명령어
+ - $ npm init : npm package 생성
+	> package name : npm package 이름 생성
+	> version : package 버전 선택
+	> description : 생성한 npm package 설명
+	> entry point : 시작점이 되는 js 파일명 선택
+	> test command : nodejs test 실행 시 사용되는 언어
+	> git repository : github&gitlab Repository Address
+	> keywords : 인터넷에 올린내용을 찾을 수 있도록 키워드 생성
+	> author : 작성자
+	> license : [ISC] 오픈소스 라이센스
+ - 입력완료 시 package.json으로 json파일로 생성함
+ - 

@@ -1,0 +1,6 @@
+## spring-boot-devtools 사용하기
+ - 서버 재로딩 없이 바로바로 수정한 내용 반영용 툴
+ 
+ 1. 의존성 추가 : developmentOnly 'org.springframework.boot:spring-boot-devtools'
+ 2. Settings > Advenced Settings > Compiler > Allow auto-make ... 체크
+ 3. Settings > Bulid, Execution, Deployment > Compiler > Bulid project automatically 체크

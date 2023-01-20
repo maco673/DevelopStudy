@@ -1,0 +1,12 @@
+node.js : js기반
+npm : node packet managemant
+
+visual studio code 환경설정
+ - prettier : 코드 정리 변환기
+ - atom light : 테마
+ - meterial icon theme : 아이콘테마
+ - bracket pair colorizer : 작업영역 나눔 보조
+ 
+git Bash 설치 : cmd창 관련 보기 편하게 해주는 Tool
+
+nodeJs 설정
