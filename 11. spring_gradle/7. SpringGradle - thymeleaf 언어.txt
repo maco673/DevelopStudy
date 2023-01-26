@@ -1,0 +1,42 @@
+## Gradle Build 파일 생성
+ - 콘솔창 열기
+ - cd [project path] 프로젝트 폴더로 이동
+ - gradlew.bat build (Mac : ./gradlew build)
+ - java -jar [프로젝트명&버전]-SNAPSHOT.jar
+ - 서버 동작 확인
+
+
+## thymeleaf 문법 : 기본 표현식 th:[속성]="서버에서 받은 값 및 조건식"
+ 1. 기본표현식
+    - 변수 : ${...} - ${student.id}
+    - 선택자 : *{...} - *{id}
+    - 메시지 : #{...} - #{id}
+    - 링크URL : @{...} - @{https://www.naver.com}
+    - 부분적 표현 : ~{...} -
+    - 조건 연산자 : and, or, not, !
+    - ${student.age} > 20 and ${student.age} < 10 처럼 각각 분리하여서 사용하거나
+    - ${student.age > 20 or student.age < 10} 처럼 한 번에 묶어서 사용하는 것도 가능
+    - 텍스트 결합 : ${student.id}+${student.name}
+    - 문장 결합 : |학생 아이디 : ${student.id}, 학생 이름 : ${student.name} | - | 로 전체 문장을 묶어줌
+    - if-then : if ? then - ${student.age < 20} ? '청소년'
+    - if-then-else : if ? then : else - ${student.age < 20} ? '청소년' : '성인'
+    - default : value ?: defaultValue
+ 
+ 2. 서버 내 경로 : @{경로} 사용 
+ 3. 태그 내 문법
+    3.1 기본 값 컨트롤
+        - th:text="" : 서버에서 전달받은 값으로 Text내용만 치환(받아온 값에 태그가 있어도 적용 안됨 문장으로 출력)
+        - th:value="" : 서버에서 전달받은 값으로 value값 컨트롤
+        - th:placeholder="" : 서버에서 전달받은 값으로 placeholder 컨트롤
+    3.2 조건문
+        - th:switch="${조건식}" : Switch-case문
+        - th:case="[조건값]" : th:switch과 함께 쓰인다.
+        - th:if="" : if문
+        - th:unless="" : else문
+
+    3.3 반복문
+        - th:each : 반복문 (예: th:each="item:${itemList}")
+
+ - th:href="[path]" : path 부분에 URL 입력으로 등록 가능 or @{} 서버주소 호출(기본경로 : resource > static)
+ - th:src="" :
+ 

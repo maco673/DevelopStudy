@@ -1,0 +1,7 @@
+## 어노테이션
+
+# controller 
+ - @Controller : view 반환용으로 사용
+ - @RestController : @ResponseBody와 @Controller가 합쳐진 어노테이션 Json Data 반환용으로 사용
+ - @ResponseBody : response에 json 데이터를 넣어 반환함
+ 

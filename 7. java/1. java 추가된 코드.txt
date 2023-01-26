@@ -1,0 +1,13 @@
+## 자바 1.8 이상부터 추가된 코드 정리
+# LocalDateTime : 날짜 객체 | 월에 +1 해줄 필요 없음 다루기 쉬움
+
+# Optional<[객체]> : NullPointException 방지용
+ - Optional.of([객체]) : 절대 null이 되지 않는 내용(null 입력 시 NullPointException 발생)
+ - Optional.ofNullable([반환값]) : null이어도 값을 Optional객체로 감싸줄 수 있음 (클라이언트 컨트롤 가능 | NullPointException 방지)
+  > [Optional명].orElse([반환값]) : Optional 객체에 값이 없는 경우 반환값을 리턴한다 (메모리 비용이 높음 최대한 사용을 피해야함) || 값이 null이 아닌경우 사용
+  > [Optional명].orElseGet([반환값]) : Optional 객체에 값이 없는 경우 반환값을 함수로 리턴한다                                 || 값이 null일 수 도 있을 경우 사용
+ - [Optional명].map([VO or list or map]::[Value명]) : Value에 해당하는 값 리턴
+ - [Optional명].orElseThrow([NullPointException]::new) : NullPointException 처리를 안에 있는 내용과 같이 실행
+
+** Optional은 null이 발생할 확률이 높거나 null로 인해 시스템에 중대한 오류가 발생하는 것을 감안하여 설계되었으므로 null이 발생하지 않는 경우는 사용하지 않는 것이 좋다.
+** Optional은 직렬화를 지원하지 않는다.

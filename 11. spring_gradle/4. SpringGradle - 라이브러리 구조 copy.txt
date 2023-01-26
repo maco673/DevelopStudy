@@ -1,0 +1,19 @@
+## Gradle은 의존관계가 있는 모든 라이브러리를 다운로드한다
+
+# 스프링 부트 라이브러리
+1. spring-boot-starter-web
+ - spring-boot-starter-tomcat : 톰캣
+ - spring-webmvc : 스프링 웹 MVC
+
+2. spring-boot-starter-thymeleaf : 템플릿엔진
+3. spring-boot-starter : 
+ - spring-boot > spring-core
+ - spring-boot-starter-logging > logback, slf4j
+
+ 4. spring-boot-starter-test : 테스트 라이브러리
+  - junit : 테스트 프레임워크
+  - mockito : 목 라이브러리
+  - assertj : 테스트 코드를 좀 더 편하게 작성할 수 있도록 도와주는 라이브러리
+  - spring-test : 스프링 통합 테스트 지원
+
+  

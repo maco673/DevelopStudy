@@ -1,0 +1,5 @@
+## 템플릿엔진 : thymeleaf
+ - th : thymeleaf의 줄임말 
+
+## 문법
+ - th:text="'안녕하세요' + ${data}"
